@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company - Products and APIs for moving money</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.97); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .animate-fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .animate-scale-in {
+            opacity: 0;
+            animation: scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .delay-0 { animation-delay: 0ms; }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+
+        .text-balance { text-wrap: balance; }
+        .text-pretty { text-wrap: pretty; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .animate-fade-in-up, .animate-fade-in, .animate-scale-in {
+                animation: none;
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        /* Hide scrollbar for tabs */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-[#FAFAFA] font-sans antialiased text-[#111111] selection:bg-black selection:text-white">
+
+    <!-- Navigation -->
+    <header class="w-full max-w-[1440px] mx-auto px-6 lg:px-12 py-6 flex items-center justify-between animate-fade-in delay-0">
+        <div class="flex items-center gap-10">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-black">
+                    <path d="M12 0L13.5 10.5L24 12L13.5 13.5L12 24L10.5 13.5L0 12L10.5 10.5L12 0Z" fill="currentColor"/>
+                    <path d="M4.5 4.5L10 10L4.5 15.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-hover:opacity-100 transition-opacity"/>
+                </svg>
+                <span class="text-[22px] font-semibold tracking-tight">company</span>
+            </a>
+
+            <!-- Main Nav Links -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="#" class="text-[15px] text-[#444444] hover:text-black transition-colors duration-200">Products</a>
+                <a href="#" class="text-[15px] text-[#444444] hover:text-black transition-colors duration-200">Use cases</a>
+                <a href="#" class="text-[15px] text-[#444444] hover:text-black transition-colors duration-200">Customers</a>
+                <a href="#" class="text-[15px] text-[#444444] hover:text-black transition-colors duration-200">Company</a>
+            </nav>
+        </div>
+
+        <!-- Right Nav Links -->
+        <div class="hidden md:flex items-center gap-8">
+            <a href="#" class="text-[15px] text-[#444444] hover:text-black transition-colors duration-200">View Docs</a>
+            <a href="#" class="text-[15px] text-[#444444] hover:text-black transition-colors duration-200">Log in</a>
+            <a href="#" class="text-[15px] text-[#444444] hover:text-black transition-colors duration-200">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="w-full max-w-[1440px] mx-auto px-6 lg:px-12 pt-20 lg:pt-28 pb-16">
+        
+        <!-- Text Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-start mb-16 lg:mb-20">
+            
+            <!-- Headline -->
+            <div class="lg:col-span-7 animate-fade-in-up delay-100">
+                <h1 class="text-[48px] md:text-[64px] lg:text-[76px] leading-[1.05] font-medium tracking-[-0.02em] text-[#111111] text-balance">
+                    Products and APIs<br>for moving money
+                </h1>
+            </div>
+
+            <!-- Subheadline & CTA -->
+            <div class="lg:col-span-4 lg:col-start-9 pt-2 lg:pt-4 animate-fade-in-up delay-200">
+                <p class="text-[16px] lg:text-[18px] leading-[1.6] text-[#555555] text-pretty mb-6">
+                    Simple developer tools to send value instantly anywhere in the world on an open network.
+                </p>
+                <a href="#" class="inline-flex items-center gap-1.5 text-[16px] font-medium text-[#111111] hover:opacity-70 transition-opacity duration-200 active:scale-97">
+                    Explore Grid
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.33331 8H12.6666" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8 3.33331L12.6667 7.99998L8 12.6666" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Interactive Image Area -->
+        <div class="relative w-full h-[500px] md:h-[600px] lg:h-[700px] rounded-[24px] lg:rounded-[32px] overflow-hidden animate-scale-in delay-300 shadow-sm bg-[#b89772]">
+            
+            <!-- Background Image (Wheat Field Placeholder) -->
+            <img src="https://imolwncbqxugevwmleed.supabase.co/storage/v1/object/public/public-assets/hero-images/dcac9259-6e7e-4092-afd4-f3dd85a462a3/hero-2-img-0-1777164119010.png" alt="Wheat Field Background" class="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-80">
+            
+            <!-- Subtle Overlays for text contrast -->
+            <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-transparent h-32 z-0"></div>
+            <div class="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-0"></div>
+
+            <!-- Top Tabs -->
+            <div class="absolute top-0 left-0 w-full px-6 lg:px-8 py-6 flex items-center gap-1 overflow-x-auto no-scrollbar z-10">
+                <button class="px-3 py-1.5 text-white/80 text-[14px] font-medium whitespace-nowrap hover:text-white transition-colors duration-200">Cross-border</button>
+                <button class="px-3 py-1.5 bg-white text-[#111111] text-[14px] font-medium rounded-md whitespace-nowrap shadow-sm">Ramps</button>
+                <button class="px-3 py-1.5 text-white/80 text-[14px] font-medium whitespace-nowrap hover:text-white transition-colors duration-200">Pay-ins</button>
+                <button class="px-3 py-1.5 text-white/80 text-[14px] font-medium whitespace-nowrap hover:text-white transition-colors duration-200">Payouts</button>
+                <button class="px-3 py-1.5 text-white/80 text-[14px] font-medium whitespace-nowrap hover:text-white transition-colors duration-200">Cards</button>
+                <button class="px-3 py-1.5 text-white/80 text-[14px] font-medium whitespace-nowrap hover:text-white transition-colors duration-200">Rewards</button>
+                <button class="px-3 py-1.5 text-white/80 text-[14px] font-medium whitespace-nowrap hover:text-white transition-colors duration-200">Payroll</button>
+                <button class="px-3 py-1.5 text-white/80 text-[14px] font-medium whitespace-nowrap hover:text-white transition-colors duration-200">FX</button>
+                <button class="px-3 py-1.5 text-white/80 text-[14px] font-medium whitespace-nowrap hover:text-white transition-colors duration-200">Treasury</button>
+                <button class="px-3 py-1.5 text-white/80 text-[14px] font-medium whitespace-nowrap hover:text-white transition-colors duration-200">Node management</button>
+            </div>
+
+            <!-- UI Card -->
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-[360px] z-20">
+                <div class="bg-[#F3EFEA] rounded-[20px] p-6 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.3)]">
+                    
+                    <div class="flex justify-between items-baseline mb-5">
+                        <span class="text-[17px] font-semibold text-[#111111]">Buy 0.004 BTC</span>
+                        <span class="text-[14px] text-[#555555]">483.84 USD</span>
+                    </div>
+                    
+                    <div class="h-[1px] w-full bg-black/5 mb-5"></div>
+                    
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm border border-black/5 shrink-0">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#555555]">
+                                <path d="M3 21h18"></path>
+                                <path d="M3 10h18"></path>
+                                <path d="M5 6l7-3 7 3"></path>
+                                <path d="M4 10v11"></path>
+                                <path d="M20 10v11"></path>
+                                <path d="M8 14v3"></path>
+                                <path d="M12 14v3"></path>
+                                <path d="M16 14v3"></path>
+                            </svg>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-[12px] text-[#555555] leading-tight">Pay with</span>
+                            <span class="text-[14px] font-medium text-[#111111] leading-tight mt-0.5">Acme Checking *4739</span>
+                        </div>
+                    </div>
+                    
+                    <button class="w-full py-3 bg-[#7A4F21] hover:bg-[#63401A] text-white text-[15px] font-medium rounded-xl transition-colors duration-200">
+                        Buy now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Code Block -->
+            <div class="absolute bottom-6 left-6 lg:bottom-8 lg:left-8 z-20 flex gap-4 font-mono text-[11px] lg:text-[12px] leading-[1.6]">
+                <div class="flex flex-col text-white/40 text-right select-none">
+                    <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span>
+                </div>
+                <div class="flex flex-col text-white/90 whitespace-pre">
+<span class="text-white/50"># On-ramp: Fiat to crypto</span>
+<span><span class="text-blue-300">curl</span> -X POST 'https://api.company.com/grid/2023-10-13/quotes' \</span>
+<span>  -u "$GRID_API_KEY:$GRID_API_SECRET" \</span>
+<span>  -H 'Content-Type: application/json' \</span>
+<span>  -d '{</span>
+<span>    "source": {</span>
+<span>      "customerId": "Customer:019542f5-b3c7-4d02-8000-000000000001",</span>
+<span>      "currency": "USD"</span>
+<span>    },</span>
+<span>    "destination": {</span>
+<span>      "externalAccountDetails": [</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
